@@ -394,7 +394,7 @@
       <diagramEntity xmi:uuid="mmuuid:65b682fb-989a-4cb4-a76a-dc549467b95f" modelObject="mmuuid/eb37a8d7-7ab9-4fca-a4ce-92f9f78a418d" xPosition="10" yPosition="10"/>
     </diagram>
   </diagram:DiagramContainer>
-  <jdbc:JdbcSource xmi:uuid="mmuuid:2f0af6e0-45f9-455a-a3f8-100b1a0049d2" name="Local PostgreSQL" driverName="PostgreSQL JDBC Driver" driverClass="org.postgresql.Driver" username="dvuser" password="dvuser" url="jdbc:postgresql://localhost:5432/eucustomers">
+  <jdbc:JdbcSource xmi:uuid="mmuuid:2f0af6e0-45f9-455a-a3f8-100b1a0049d2" name="Local PostgreSQL" driverName="PostgreSQL JDBC Driver" driverClass="org.postgresql.Driver" username="dvuser" password="dvuser" url="jdbc:postgresql://209.132.178.25:5432/eucustomers">
     <importSettings xmi:uuid="mmuuid:1ca693aa-1526-48d3-ac35-62c07b82baf4" createCatalogsInModel="false" createSchemasInModel="false" includeIndexes="false" includeApproximateIndexes="false">
       <includedSchemaPaths>/public</includedSchemaPaths>
       <excludedObjectPaths>/public/TABLE/account</excludedObjectPaths>
