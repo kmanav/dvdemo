@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vdb name="dvdemo" version="1">
+<description/>
+<property name="validationDateTime" value="Wed May 11 14:20:29 PDT 2016"/>
+<property name="validationVersion" value="8.7.1"/>
+<model name="EU_Customers">
+<source connection-jndi-name="java:/EU_Customers" name="EU_Customers" translator-name="postgresql"/>
+<metadata type="DDL"><![CDATA[
+CREATE FOREIGN TABLE customer (
+	customerid string(12) NOT NULL OPTIONS(NAMEINSOURCE '"customerid"', NATIVE_TYPE 'varchar'),
+	firstname string(25) NOT NULL OPTIONS(NAMEINSOURCE '"firstname"', NATIVE_TYPE 'varchar'),
+	lastname string(25) NOT NULL OPTIONS(NAMEINSOURCE '"lastname"', NATIVE_TYPE 'varchar'),
+	middlename string(15) DEFAULT ' ' OPTIONS(NAMEINSOURCE '"middlename"', NATIVE_TYPE 'varchar'),
+	streetaddress string(50) NOT NULL OPTIONS(NAMEINSOURCE '"streetaddress"', NATIVE_TYPE 'varchar'),
+	streetaddress2 string(50) DEFAULT ' ' OPTIONS(NAMEINSOURCE '"streetaddress2"', NATIVE_TYPE 'varchar'),
+	city string(25) NOT NULL OPTIONS(NAMEINSOURCE '"city"', NATIVE_TYPE 'varchar'),
+	stateprovince string(25) DEFAULT ' ' OPTIONS(NAMEINSOURCE '"stateprovince"', NATIVE_TYPE 'varchar'),
+	postalcode string(15) NOT NULL OPTIONS(NAMEINSOURCE '"postalcode"', NATIVE_TYPE 'varchar'),
+	country string(10) DEFAULT ' ' OPTIONS(NAMEINSOURCE '"country"', NATIVE_TYPE 'varchar'),
+	phonenumber string(30) DEFAULT ' ' OPTIONS(NAMEINSOURCE '"phonenumber"', NATIVE_TYPE 'varchar'),
+	CONSTRAINT pkCustomerid PRIMARY KEY(customerid)
+) OPTIONS(NAMEINSOURCE '"public"."customer"', CARDINALITY '18')
+
+]]></metadata>
+</model>
+<model name="Customers" type="VIRTUAL">
+<metadata type="DDL"><![CDATA[
+CREATE VIEW all_customers (
+	CustomerID string(12) NOT NULL,
+	FirstName string(25),
+	LastName string(25),
+	State string(25),
+	Country string(10),
+	CONSTRAINT pk_all_customers PRIMARY KEY(CustomerID)
+) 
+AS
+		SELECT
+        t1.SSN AS CustomerID, t1.FIRSTNAME AS FirstName, t1.LASTNAME AS LastName, t1.State, 'United States' AS Country
+    FROM
+        US_Customers.customer AS t1
+UNION
+SELECT
+        t2.customerid AS CustomerID, t2.firstname AS FirstName, t2.lastname AS LastName, t2.stateprovince AS State, t2.country AS Country
+    FROM
+        EU_Customers.customer AS t2;
+
+]]></metadata>
+</model>
+<model name="US_Customers">
+<source connection-jndi-name="java:/US_Customers" name="US_Customers" translator-name="mysql5"/>
+<metadata type="DDL"><![CDATA[
+CREATE FOREIGN TABLE customer (
+	SSN string(12) NOT NULL OPTIONS(NAMEINSOURCE '`SSN`', NATIVE_TYPE 'VARCHAR'),
+	FIRSTNAME string(25) NOT NULL OPTIONS(NAMEINSOURCE '`FIRSTNAME`', NATIVE_TYPE 'VARCHAR'),
+	LASTNAME string(25) NOT NULL OPTIONS(NAMEINSOURCE '`LASTNAME`', NATIVE_TYPE 'VARCHAR'),
+	MIDDLEInitial string(15) OPTIONS(NAMEINSOURCE '`MIDDLEInitial`', NATIVE_TYPE 'VARCHAR'),
+	StreetAddress1 string(50) NOT NULL OPTIONS(NAMEINSOURCE '`StreetAddress1`', NATIVE_TYPE 'VARCHAR'),
+	AptNumber string(50) OPTIONS(NAMEINSOURCE '`AptNumber`', NATIVE_TYPE 'VARCHAR'),
+	CITY string(25) NOT NULL OPTIONS(NAMEINSOURCE '`CITY`', NATIVE_TYPE 'VARCHAR'),
+	State string(25) OPTIONS(NAMEINSOURCE '`State`', NATIVE_TYPE 'VARCHAR'),
+	ZipCode string(15) NOT NULL OPTIONS(NAMEINSOURCE '`ZipCode`', NATIVE_TYPE 'VARCHAR'),
+	Phone string(30) OPTIONS(NAMEINSOURCE '`Phone`', NATIVE_TYPE 'VARCHAR'),
+	CONSTRAINT pkSSN PRIMARY KEY(SSN)
+) OPTIONS(NAMEINSOURCE '`customer`', CARDINALITY '17')
+
+]]></metadata>
+</model>
+</vdb>

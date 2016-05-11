@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:jdbc="http://www.metamatrix.com/metamodels/JDBC" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
-  <mmcore:ModelAnnotation xmi:uuid="mmuuid:eea4e914-b203-4dd3-85e6-7748b6a0c79c" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="9.0.4.Final-v20151124-1635-B1214">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:eea4e914-b203-4dd3-85e6-7748b6a0c79c" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="9.0.6.Final-v20160316-1409-B1242">
     <modelImports xmi:uuid="mmuuid:10bdc20a-5842-4e41-b0fe-93f3e6f218f9" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
   </mmcore:ModelAnnotation>
   <relational:BaseTable xmi:uuid="mmuuid:d541a90f-6df4-49d7-aecf-7eddbd02e664" name="customer" nameInSource="`customer`" cardinality="17">
@@ -34,7 +34,7 @@
     <columns xmi:uuid="mmuuid:b6902f81-3113-4b60-b2b5-50357df61d06" name="Phone" nameInSource="`Phone`" nativeType="VARCHAR" length="30">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <primaryKey xmi:uuid="mmuuid:79db5f2e-c077-4edd-bb42-b3c37fa77f86" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/6e6c622a-31bf-49ca-a4d3-2cb4de6d3c9a"/>
+    <primaryKey xmi:uuid="mmuuid:79db5f2e-c077-4edd-bb42-b3c37fa77f86" name="pkSSN" nameInSource="" columns="mmuuid/6e6c622a-31bf-49ca-a4d3-2cb4de6d3c9a"/>
   </relational:BaseTable>
   <mmcore:AnnotationContainer xmi:uuid="mmuuid:2939c0d1-2e20-4f8b-ab1e-108d92180a14">
     <annotations xmi:uuid="mmuuid:8763f6d8-0a52-4fb2-9e65-5ee1057d047b" annotatedObject="mmuuid/eea4e914-b203-4dd3-85e6-7748b6a0c79c">
@@ -391,7 +391,7 @@
       <diagramEntity xmi:uuid="mmuuid:4a877aa6-d62d-4efe-9722-cc91f411aadb" modelObject="mmuuid/d541a90f-6df4-49d7-aecf-7eddbd02e664" xPosition="10" yPosition="10"/>
     </diagram>
   </diagram:DiagramContainer>
-  <jdbc:JdbcSource xmi:uuid="mmuuid:095929d2-977b-4e59-94a9-ab5c6a351be8" name="Remote MySQL" driverName="MySQL JDBC Driver" driverClass="com.mysql.jdbc.Driver" username="dvuser" password="dvuser" url="jdbc:mysql://localhost:3307/uscustomers">
+  <jdbc:JdbcSource xmi:uuid="mmuuid:095929d2-977b-4e59-94a9-ab5c6a351be8" name="Remote MySQL" driverName="MySQL JDBC Driver" driverClass="com.mysql.jdbc.Driver" username="dvuser" url="jdbc:mysql://localhost:3307/uscustomers">
     <importSettings xmi:uuid="mmuuid:2bf153a3-eec4-491e-948b-5b3aac63c3b9" createCatalogsInModel="false" createSchemasInModel="false" includeIndexes="false" includeApproximateIndexes="false">
       <includedCatalogPaths>/uscustomers</includedCatalogPaths>
       <excludedObjectPaths>/uscustomers/TABLE/account</excludedObjectPaths>

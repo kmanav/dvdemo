@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:jdbc="http://www.metamatrix.com/metamodels/JDBC" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
-  <mmcore:ModelAnnotation xmi:uuid="mmuuid:3b2ffc1a-4205-4a4b-ac7d-84415a735c52" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="9.0.4.Final-v20151124-1635-B1214">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:3b2ffc1a-4205-4a4b-ac7d-84415a735c52" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="9.0.6.Final-v20160316-1409-B1242">
     <modelImports xmi:uuid="mmuuid:79199ad0-d588-41a4-84c1-b7c32bc4227e" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
   </mmcore:ModelAnnotation>
   <relational:BaseTable xmi:uuid="mmuuid:eb37a8d7-7ab9-4fca-a4ce-92f9f78a418d" name="customer" nameInSource="&quot;public&quot;.&quot;customer&quot;" cardinality="18">
@@ -13,31 +13,31 @@
     <columns xmi:uuid="mmuuid:75b06de5-9cc4-4e22-abd3-9f30514b4844" name="lastname" nameInSource="&quot;lastname&quot;" nativeType="varchar" length="25" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:47af3248-8e8f-4d93-b2dc-ad60d0a59b34" name="middlename" nameInSource="&quot;middlename&quot;" nativeType="varchar" length="15" defaultValue="NULL::character varying">
+    <columns xmi:uuid="mmuuid:47af3248-8e8f-4d93-b2dc-ad60d0a59b34" name="middlename" nameInSource="&quot;middlename&quot;" nativeType="varchar" length="15" defaultValue="' '">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
     <columns xmi:uuid="mmuuid:33aac104-5f11-4b63-9255-c062dfe281ad" name="streetaddress" nameInSource="&quot;streetaddress&quot;" nativeType="varchar" length="50" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:e96c2f08-9470-4166-a0b0-3ebf4d67cdde" name="streetaddress2" nameInSource="&quot;streetaddress2&quot;" nativeType="varchar" length="50" defaultValue="NULL::character varying">
+    <columns xmi:uuid="mmuuid:e96c2f08-9470-4166-a0b0-3ebf4d67cdde" name="streetaddress2" nameInSource="&quot;streetaddress2&quot;" nativeType="varchar" length="50" defaultValue="' '">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
     <columns xmi:uuid="mmuuid:b5398130-3c2b-4694-98ba-0c195519e23d" name="city" nameInSource="&quot;city&quot;" nativeType="varchar" length="25" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:45a6a079-0f33-4456-93eb-108d8342690d" name="stateprovince" nameInSource="&quot;stateprovince&quot;" nativeType="varchar" length="25" defaultValue="NULL::character varying">
+    <columns xmi:uuid="mmuuid:45a6a079-0f33-4456-93eb-108d8342690d" name="stateprovince" nameInSource="&quot;stateprovince&quot;" nativeType="varchar" length="25" defaultValue="' '">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
     <columns xmi:uuid="mmuuid:e8ce6d32-6379-4405-8133-20ba8bc9ffa3" name="postalcode" nameInSource="&quot;postalcode&quot;" nativeType="varchar" length="15" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:524ae979-cbb6-4783-b670-63a490e8e350" name="country" nameInSource="&quot;country&quot;" nativeType="varchar" length="10" defaultValue="NULL::character varying">
+    <columns xmi:uuid="mmuuid:524ae979-cbb6-4783-b670-63a490e8e350" name="country" nameInSource="&quot;country&quot;" nativeType="varchar" length="10" defaultValue="' '">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:b55526c2-ae3b-417a-b6fd-450be7f0704b" name="phonenumber" nameInSource="&quot;phonenumber&quot;" nativeType="varchar" length="30" defaultValue="NULL::character varying">
+    <columns xmi:uuid="mmuuid:b55526c2-ae3b-417a-b6fd-450be7f0704b" name="phonenumber" nameInSource="&quot;phonenumber&quot;" nativeType="varchar" length="30" defaultValue="' '">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <primaryKey xmi:uuid="mmuuid:f9d3cbca-5d28-401f-b7cd-12c203e874ae" name="customer_pkey" nameInSource="&quot;customer_pkey&quot;" columns="mmuuid/d700f00e-b274-4e10-834d-370eeea4ff3b"/>
+    <primaryKey xmi:uuid="mmuuid:f9d3cbca-5d28-401f-b7cd-12c203e874ae" name="pkCustomerid" nameInSource="&quot;customer_pkey&quot;" columns="mmuuid/d700f00e-b274-4e10-834d-370eeea4ff3b"/>
   </relational:BaseTable>
   <mmcore:AnnotationContainer xmi:uuid="mmuuid:d2acd5bb-91fb-44b5-a86d-7124db3095c6">
     <annotations xmi:uuid="mmuuid:9a184472-c9b7-49b6-a751-2295fd32215b" annotatedObject="mmuuid/3b2ffc1a-4205-4a4b-ac7d-84415a735c52">
@@ -394,7 +394,7 @@
       <diagramEntity xmi:uuid="mmuuid:65b682fb-989a-4cb4-a76a-dc549467b95f" modelObject="mmuuid/eb37a8d7-7ab9-4fca-a4ce-92f9f78a418d" xPosition="10" yPosition="10"/>
     </diagram>
   </diagram:DiagramContainer>
-  <jdbc:JdbcSource xmi:uuid="mmuuid:2f0af6e0-45f9-455a-a3f8-100b1a0049d2" name="Local PostgreSQL" driverName="PostgreSQL JDBC Driver" driverClass="org.postgresql.Driver" username="dvuser" password="dvuser" url="jdbc:postgresql://209.132.178.25:5432/eucustomers">
+  <jdbc:JdbcSource xmi:uuid="mmuuid:2f0af6e0-45f9-455a-a3f8-100b1a0049d2" name="Local PostgreSQL" driverName="PostgreSQL JDBC Driver" driverClass="org.postgresql.Driver" username="dvuser" url="jdbc:postgresql://209.132.178.25:5432/eucustomers">
     <importSettings xmi:uuid="mmuuid:1ca693aa-1526-48d3-ac35-62c07b82baf4" createCatalogsInModel="false" createSchemasInModel="false" includeIndexes="false" includeApproximateIndexes="false">
       <includedSchemaPaths>/public</includedSchemaPaths>
       <excludedObjectPaths>/public/TABLE/account</excludedObjectPaths>
