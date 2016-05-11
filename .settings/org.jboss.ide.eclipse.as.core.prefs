@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-org.jboss.ide.eclipse.as.core.singledeployable.deployableList=dvdemo-vdb.xml\n
+org.jboss.ide.eclipse.as.core.singledeployable.deployableList=drivers/mysql-connector-java-5.1.29.jar\ndrivers/postgresql-9.3-1100-jdbc4.jar\n

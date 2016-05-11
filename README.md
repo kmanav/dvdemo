@@ -16,9 +16,10 @@ select * from Customers.all_customers
 ###Setup
 
 1. Import the project and open the project in Teiid Designer
-2. Refer to the README.md document in the __drivers__ folder, download and save them in the same folder 
-3. You may be prompted for password for both __US_Customers__ and __EU_Customers__, use `dvuser` as the password in each case
+2. Refer to the README.md document in the __drivers__ folder, download and save them in the same folder
+3. Highlight/Select both the drivers, right-click and choose __Mark as Deployable__.
 4. Right-click on the `dvdemo.vdb` and choose __Modeling → Execute__ to push the drivers and setup the datasources on the JDV runtime
-5. For any further changes to the models, _resynchronize_ the contents in the __dvdemo.vdb__ and __Execute__ the VDB for testing
+5. You may be prompted for password for both __US_Customers__ and __EU_Customers__, use `dvuser` as the password in each case
+6. For any further changes to the models, _resynchronize_ the contents in the __dvdemo.vdb__ and __Execute__ the VDB for testing
 
 > __Note:__ Since the project does not contain relevant database connection profiles (those which typically exist in the workspace) that can be reused to **preview** the individual source tables, it is important to first run the step #4 in the above list to be able to push the JDBC drivers to the running JDV runtime before planning on previewing the source tables. 

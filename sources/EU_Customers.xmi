@@ -43,7 +43,7 @@
     <annotations xmi:uuid="mmuuid:9a184472-c9b7-49b6-a751-2295fd32215b" annotatedObject="mmuuid/3b2ffc1a-4205-4a4b-ac7d-84415a735c52">
       <tags xmi:uuid="mmuuid:ef564a49-aadf-4eb6-8c0f-0918998dfed1" key="connection:driver-class" value="org.postgresql.Driver"/>
       <tags xmi:uuid="mmuuid:e06c4716-446d-4d79-ae60-52a451f4598e" key="connectionProfile:connectionProfileName" value="Remote PostgreSQL"/>
-      <tags xmi:uuid="mmuuid:4973d7e6-1ea0-4e2b-baaa-1b18c1b7be1f" key="connection:jarList" value="../drivers/postgresql-9.3-1100.jdbc4.jar"/>
+      <tags xmi:uuid="mmuuid:4973d7e6-1ea0-4e2b-baaa-1b18c1b7be1f" key="connection:jarList" value="../drivers/postgresql-9.3-1100-jdbc4.jar"/>
       <tags xmi:uuid="mmuuid:27fb9fc1-7d05-4662-bcce-7d38d55fc30a" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.enablement.postgresql.connectionProfile"/>
       <tags xmi:uuid="mmuuid:7e6cd6c6-df73-414e-b9c0-a9a962b9db4c" key="translator:name" value="postgresql"/>
       <tags xmi:uuid="mmuuid:212b9b69-b27c-48ea-a693-b08ef371ff88" key="connection:connection-url" value="jdbc:postgresql://209.132.178.25:5432/eucustomers"/>
